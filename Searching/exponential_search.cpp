@@ -9,6 +9,7 @@
 
 // Function prototype
 bool isIncreasing(int *arr, int n);
+int min(int a, int b);
 int expoentialSearch(int *arr, int n, int val);
 int binarySearch(int *arr, int low, int high, int val);
 
@@ -73,16 +74,27 @@ bool isIncreasing(int *arr, int n)
     return true;
 }
 
+// Return minimum of two integers
+int min(int a, int b)
+{
+    return a < b ? a : b;
+}
+
 // Implementation of exponential search
 int expoentialSearch(int *arr, int n, int val)
 {
+    if (n == 0)
+    {
+        return -1;
+    }
+
     int i = 1;
     while (i < n && arr[i] <= val)
     {
         i *= 2;
     }
-
-    return binarySearch(arr, i / 2, i - 1, val);
+    
+    return binarySearch(arr, i / 2, min(i - 1, n - 1), val);
 }
 
 // Implementation of binary search
