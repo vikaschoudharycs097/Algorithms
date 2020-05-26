@@ -28,7 +28,7 @@ int main(void)
     std::cout << "Enter " << n << " elements: ";
     inputArray(arr, n);
 
-    // Selection sort
+    // Merge sort
     mergeSort(arr, n);
 
     // Display array
