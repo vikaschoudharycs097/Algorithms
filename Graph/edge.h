@@ -1,5 +1,5 @@
 /********************************************
- * Implementation of Edge class
+ * Interface of Edge class
  * 
  * @author Vikas Choudhary
  * @date 01.06.2020
