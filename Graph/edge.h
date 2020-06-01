@@ -10,7 +10,7 @@ class Edge
 {
     int _src_vertex;
     int _dest_vertex;
-    double weight;
+    double _weight;
 public:
     // Constructor
     Edge(int src_vertex, int dest_vertex);
