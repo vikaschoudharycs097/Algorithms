@@ -5,6 +5,9 @@
  * @date 01.06.2020
  *******************************************/
 
+#ifndef EDGE_H
+#define EDGE_H
+
 // Representing an edge in a Graph
 class Edge 
 {
@@ -21,3 +24,5 @@ public:
     int getDest(void) const;
     int getWeight(void) const;
 };
+
+#endif
