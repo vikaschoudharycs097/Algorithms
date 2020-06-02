@@ -9,7 +9,7 @@
 
 // Constructor
 Edge::Edge(int src_vertex, int dest_vertex):
-_src_vertex(src_vertex), _dest_vertex(dest_vertex)
+_src_vertex(src_vertex), _dest_vertex(dest_vertex), _weight(1)
 {
 
 }
