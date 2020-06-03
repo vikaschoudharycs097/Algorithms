@@ -24,6 +24,8 @@ private:
 
     // Setters
     void setNumOfVertex(int n_vertex);
+    void addEdge(int src, int dest);
+    void addEdge(int src, int dest, double weight);
 };
 
 #endif
