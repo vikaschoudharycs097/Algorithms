@@ -56,4 +56,38 @@ bool isSorted(T arr[], int n)
     return true;
 }
 
+/**
+ * Search given element in an sorted array(increasing order)
+ * @param1: Pointer to sorted array
+ * @param2: Size of array
+ * @param3: element for search
+ * @return: index if element found else -1
+ */
+template<typename T>
+int binarySearch(T *arr, int n, T val)
+{
+    int low = 0;
+    int high = n - 1;
+    int mid;
+
+    while (low <= high)
+    {
+        mid = low + (high - low) / 2;
+        if (arr[mid] == val)
+        {
+            return mid;
+        }
+        else if (arr[mid] > val)
+        {
+            high = mid - 1;
+        }     
+        else 
+        {
+            low = mid + 1;
+        }
+    }
+
+    return -1;
+} 
+
 #endif
