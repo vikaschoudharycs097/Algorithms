@@ -21,7 +21,7 @@ int main(void)
     // Displaying pattern
     for (int i = 0; i < n; i++)
     {
-        // Displaying space to construct right aligned
+        // Displaying spaces to construct right aligned triangle
         for (int j = 0; j < n-1-i; j++)
         {
             std::cout << "  ";
