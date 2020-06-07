@@ -22,7 +22,9 @@ int main(void)
     {
         for (int j = 0; j <= i; j++)
         {
-            std::cout << i << "   ";
+            std::cout.width(3);
+            std::cout << std::left;
+            std::cout << i;
         }
         std::cout << "\n";
     }
