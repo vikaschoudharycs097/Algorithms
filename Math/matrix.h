@@ -18,4 +18,14 @@ public:
     Matrix(int rows, int cols);
     Matrix(int rows, int cols, std::vector<std::vector<int>> &data);
     Matrix(const Matrix &mat);
+
+    // Input matrix
+    void input(void);
+
+    // Output matrix
+    void print(void);
+
+    // Getters
+    int getRows(void) const;
+    int getCols(void) const;
 };
