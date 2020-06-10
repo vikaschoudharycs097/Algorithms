@@ -1,5 +1,5 @@
 /***************************************
- * Implementation of Matrix class
+ * Interface of Matrix class
  * 
  * @author Vikas Choudhary
  * @date 10.06.2020
