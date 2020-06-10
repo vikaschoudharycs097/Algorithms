@@ -16,7 +16,7 @@ private:
 
 public:
     Matrix(int rows, int cols);
-    Matrix(int rows, int cols, std::vector<std::vector<int>> &data);
+    Matrix(int rows, int cols, std::vector<std::vector<T>> &data);
     Matrix(const Matrix &mat);
 
     // Input matrix
