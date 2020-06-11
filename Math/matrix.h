@@ -14,6 +14,9 @@ private:
     int _cols;
     T **_matrix;
 
+    // Function to allocate memory for _matrix
+    void _createMatrix(void);
+
 public:
     Matrix(int rows, int cols);
     Matrix(int rows, int cols, std::vector<std::vector<T>> &data);
