@@ -145,3 +145,32 @@ Matrix<T> Matrix<T>::operator-(const Matrix &mat)
 
     std::cerr << "Error: Matrices are not comptible\n";  
 }
+
+/**
+ * Overloading * operator to perform
+ * multiplication of two matrices if they
+ * are compatible
+ */
+template<typename T>
+Matrix<T> Matrix<T>::operator*(const Matrix &mat)
+{
+    if (_cols == mat._rows)
+    {
+        Matrix<T> res(_rows, mat._cols);
+        for (int i = 0; i < _rows; i++)
+        {
+            for (int j = 0; j < mat._cols; j++)
+            {
+                res[i][j] = 0;
+                for (int k = 0; k < _cols; k++)
+                {
+                    res[i][j] += _matrix[i][k] * mat._matrix[k][j];
+                }
+            }
+        }
+
+        return res;
+    }
+
+    std::cerr << "Error: Matrices are not comptible\n";  
+}
