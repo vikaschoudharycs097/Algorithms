@@ -35,4 +35,5 @@ public:
 
     // Operators
     Matrix<T> operator+(const Matrix &mat);
+    Matrix<T> operator-(const Matrix &mat);
 };
