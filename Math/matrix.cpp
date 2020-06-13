@@ -95,6 +95,20 @@ int Matrix<T>::getCols(void) const
     return _cols;
 }
 
+// Return value at given index
+template<typename T>
+int Matrix<T>::getValue(int i, int j) const
+{
+    if (i < 0 || i >= _rows || j < 0 || j >= _cols)
+    {
+        std::cerr << "Error: Invalid index\n";
+    }
+    else 
+    {
+        return _matrix[i][j];
+    }
+}
+
 // Operators
 /**
  * Overloading + operator to perform
