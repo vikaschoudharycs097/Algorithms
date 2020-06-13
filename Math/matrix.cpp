@@ -94,3 +94,29 @@ int Matrix<T>::getCols(void) const
 {
     return _cols;
 }
+
+// Operators
+/**
+ * Overloading + operator to perform
+ * Addition of two matrices if they
+ * are compatible
+ */
+template<typename T>
+Matrix<T> Matrix<T>::operator+(const Matrix &mat)
+{
+    if (_rows == mat._rows && _cols == mat._cols)
+    {
+        Matrix<T> res(_rows, _cols);
+        for (int i = 0; i < _rows; i++)
+        {
+            for (int j = 0; j < _cols; j++)
+            {
+                res[i][j] = _matrix[i][j] + mat._matrix[i][j];
+            }
+        }
+
+        return res;
+    }
+
+    std::cerr << "Error: Matrices are not comptible\n";  
+} 

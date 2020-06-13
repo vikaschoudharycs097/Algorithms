@@ -32,4 +32,7 @@ public:
     // Getters
     int getRows(void) const;
     int getCols(void) const;
+
+    // Operators
+    Matrix<T> operator+(const Matrix &mat);
 };
