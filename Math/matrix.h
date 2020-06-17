@@ -41,6 +41,7 @@ public:
 
     // Matrix op scaler
     Matrix<T> operator+(T n);
+    Matrix<T> operator-(T n);
 };
 
 // Constructors
@@ -259,3 +260,22 @@ Matrix<T> Matrix<T>::operator +(T n)
 
     return res;
 }
+
+/**
+ * Substracting an scaler from matrix
+ */
+template<typename T>
+Matrix<T> Matrix<T>::operator -(T n)
+{
+    Matrix<T> res(_rows, _cols);
+    for (int i = 0; i < _rows; i++)
+    {
+        for (int j = 0; j < _cols; j++)
+        {
+            res._matrix[i][j] = _matrix[i][j] - n;
+        }
+    }
+
+    return res;
+}
+
